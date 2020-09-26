@@ -137,12 +137,9 @@ async function renderTable() {
                 document.querySelector(`${deleteModal} form`).removeEventListener('submit', submit);
             })
         });
-
-        const deletedContainer = document.createElement("td");
-        deletedContainer.appendChild(deleteLink)
-
+        
         const deleteButton = row.insertCell(-1);
-        deleteButton.appendChild(deletedContainer);
+        deleteButton.appendChild(deleteLink);
     })
 }
 
