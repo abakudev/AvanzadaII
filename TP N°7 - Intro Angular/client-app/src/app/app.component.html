@@ -1,40 +1,11 @@
-
-<h1>Student List</h1>
-<table class="table table-striped">
-    <thead>
-        <tr>
-        <th scope="col">#</th>
-        <th scope="col">Career</th>
-        <th scope="col">Last Name</th>
-        <th scope="col">First Name</th>        
-        <th scope="col">Email</th>
-        <th scope="col">Actions</th>
-        </tr>
-    </thead>
-    <tbody id = "data">
-        <tr>
-            <th>3</th>
-            <td>Research & Development</td>
-            <td>Dowgill</td>
-            <td>Ronnica</td>
-            <td>rdowgilla@printfriendly.com</td>
-            <td><button type="button" class="btn btn-danger btn-sm">Delete</button></td>
-        </tr>
-        <tr>
-            <th>1</th>
-            <td>Research & Development</td>
-            <td>Jerwood</td>
-            <td>Oracle</td>
-            <td>ojerwood0@devdes.cn</td>
-            <td><button type="button" class="btn btn-danger btn-sm">Delete</button></td>
-        </tr>
-        <tr>
-            <th>2</th>
-            <td>Sales</td>
-            <td>Straford</td>
-            <td>Gregory</td>
-            <td>gstraford2@dyndns.org</td>
-            <td><button type="button" class="btn btn-danger btn-sm">Delete</button></td>
-        </tr>
-    </tbody>
-    </table>
+<div class="container">
+    <!--
+    <app-car-add [carList]="carList"></app-car-add>
+    <div class="p-3"></div>-->
+    <app-client-list [clientList]="clientList" 
+      (deletedClientEvent)="deleteClient($event)"></app-client-list>
+    <div class="p-3"></div>
+    <!--
+    <h4>Selected vehicle: {{ car.brand }} {{ car.model }}</h4>-->
+  </div>
+  

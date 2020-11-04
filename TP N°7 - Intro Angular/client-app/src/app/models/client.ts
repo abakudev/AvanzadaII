@@ -1,5 +1,5 @@
-export class Client{
-
+export class Client {
+    
     clientId : number;
     firstname : string;
     lastname : string;
@@ -7,3 +7,4 @@ export class Client{
     email : string;
     adress : string;
 }
+
