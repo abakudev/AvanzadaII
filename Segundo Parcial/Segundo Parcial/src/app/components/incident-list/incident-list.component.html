@@ -1,0 +1,27 @@
+<h3 class="mb-3">List Incidents</h3>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Priority</th>
+        <th scope="col">Domain</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Creator</th>
+        <th scope="col">Phone Number</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let incident of incidentList " >
+        <th scope="row">{{ incident.incidentId }}</th>
+            <td>{{ getPriorityDescriptionById(incident.priorityId) }}</td>
+            <td>{{ incident.domainName }}</td>
+            <td>{{ incident.title }}</td>
+            <td>{{ incident.description }}</td>
+            <td>{{ incident.creator }}</td>
+            <td>{{ incident.phoneNumber }}</td>
+      </tr>
+
+    </tbody>
+  </table>
