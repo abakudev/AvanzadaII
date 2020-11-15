@@ -1,0 +1,7 @@
+.sortorder:after {
+    content: "\2193";
+}
+
+.sortorder.reverse:after {
+    content: "\2191";
+}

@@ -1,0 +1,9 @@
+<form class="form animated fadeIn fast">
+    <h6>Category</h6>
+    <div class="form-check" *ngFor="let category of categoryList">
+        <input class="form-check-input" type="checkbox" value="" [id]='category.productCategoryId'>
+        <label class="form-check-label" for="defaultCheck1">{{ category.description }}</label>
+    </div>
+    <hr>
+    <button class="btn btn-outline-primary" (click)='dofilter()'> Apply Changes</button>
+</form>

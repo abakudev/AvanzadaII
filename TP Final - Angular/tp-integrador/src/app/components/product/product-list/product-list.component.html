@@ -1,0 +1,45 @@
+<main class="py-2 fadeIn fast">
+    <section id="listado" class="mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <button class="btn btn-outline-primary mb-4" [routerLink]="['/product/add']">New Product</button>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control mr-sm-2" placeholder="Search" #buscarTexto (keyup.enter)="getProducts(buscarTexto.value)">
+                </div>
+                <div class="col-md-0">
+                    <button class="btn btn-primary my-2 my-sm-0" type="button" (click)="getProducts(buscarTexto.value)">Search</button>
+                </div>
+            </div>
+            <br>
+            <table class="table table-striped ">
+                <thead class="thead-dark ">
+                    <tr>
+                        <th scope="col ">#</th>
+                        <th scope="col "> Name <i role="button" class="sortorder" (click)="sort()" id='name'></i></th>
+                        <th scope="col ">Description</th>
+                        <th scope="col ">Price</th>
+                        <th scope="col ">Category</th>
+                        <th scope="col "></th>
+                        <th scope="col "></th>
+                        <th scope="col "></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let prod of productList " ng-repeat="let prod of productList | orderBy : 'Name'">
+                        <th scope="row ">{{ prod.productId }}</th>
+                        <td>{{ prod.name}} </td>
+                        <td>{{ prod.description }}</td>
+                        <td>{{ prod.price }}</td>
+                        <td>{{ prod.productCategoryName }}</td>
+                        <td><img src="assets/view.png" [routerLink]="[ '/product/view/', prod.productId] "></td>
+                        <td><img src="assets/edit.png" [routerLink]="[ '/product/edit/', prod.productId] "></td>
+                        <td><img class="btn-click" src="assets/delete.png" (click)="delete(prod.productId)">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>

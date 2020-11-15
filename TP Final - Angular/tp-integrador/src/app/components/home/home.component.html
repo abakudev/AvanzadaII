@@ -1,0 +1,18 @@
+<!-- <div class="jumbotron jumbotron-fluid" class="animates fadeIn fast">
+    <div class="container">
+        <h1 class="display-3">Integration Application</h1>
+        <p class="lead">Aplicación de Integración Avanzada II.</p>
+    </div>
+</div> -->
+<h1> Products </h1>
+<hr>
+<div class="">
+    <div class="row">
+        <div class="col-2">
+            <app-filter (selectedFilterEvent)="getFilters($event)"></app-filter>
+        </div>
+        <div class="col-10">
+            <app-dashboard [filters]="filters"></app-dashboard>
+        </div>
+    </div>
+</div>
